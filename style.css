@@ -36,6 +36,11 @@
     --fs-productdescription: 1.2rem;
   }
 
+  body .right-elements img {
+    width: 25px;
+    align-items: center;
+  }
+
   body .elements {
     padding: 0%;
   }
@@ -46,7 +51,7 @@
   }
 
   body .categories button {
-    margin: 2% 3%;
+    margin: 5% 3%;
     background-color: #2d2c31;
     border-radius: 20px 20px 20px;
     padding: 10px;
@@ -63,7 +68,8 @@
 
   body .product button {
     border-radius: 20px 20px 20px;
-    padding: 5px;
+    margin-top: 5%;
+    padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: aliceblue;
     background: var(--gradient);
@@ -92,15 +98,24 @@
   }
 
   body .product .frame {
-    width: 130px;
-    height: 130px;
+    width: 170px;
+    height: 170px;
   }
 
   body .product .description {
-    width: 130px;
+    width: 170px;
   }
   body .product p {
-    width: 130px;
+    width: 170px;
+  }
+
+  body .upper-shopping {
+    padding: 0;
+    margin: auto;
+  }
+
+  body footer img {
+    width: 20px;
   }
 }
 
@@ -126,6 +141,15 @@ header {
   background-image: var(--gradient);
   background-size: 600%;
   animation: bg-animation 120s infinite alternate;
+}
+
+header section {
+  font-family: var(--ff-typewriter);
+  font-size: var(--fs-typewriter);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: #727475;
 }
 
 @keyframes bg-animation {
@@ -347,7 +371,6 @@ nav {
   display: flex;
   white-space: nowrap;
   overflow: hidden;
-  padding: 0% 8%;
 }
 
 .categories img {
@@ -465,4 +488,22 @@ nav {
 
 .product button:hover {
   background-color: #4b4a52;
+}
+
+footer {
+  font-family: var(--ff-general);
+  color: #f0f8ff;
+  font-size: var(--fs-general);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4% 0%;
+}
+
+footer img {
+  width: 30px;
+  margin-left: 10px;
+  vertical-align: bottom;
+  align-items: center;
 }
