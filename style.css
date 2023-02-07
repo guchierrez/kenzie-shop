@@ -40,13 +40,17 @@
     padding: 0%;
   }
 
+  body .categories {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
   body .categories button {
     margin: 2% 3%;
     background-color: #2d2c31;
     border-radius: 20px 20px 20px;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    -webkit-overflow-scrolling: touch;
   }
 
   body .categories button:hover {
