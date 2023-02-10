@@ -283,9 +283,6 @@ cartBtn.addEventListener("click", function () {
   itemCount.className = "item-count";
   itemCount.textContent = `QUANTIDADE DE ITEMS: ${sum}`;
   precoTotalDiv.appendChild(itemCount);
-  var totalPrice = document.createElement("p");
-  totalPrice.className = "preco-total";
-  precoTotalDiv.appendChild(totalPrice);
   var compra = document.createElement("div");
   compra.className = "compra";
   compraDiv = cartNavBar.append(compra);
