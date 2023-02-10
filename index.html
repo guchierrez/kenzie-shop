@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="index.js" defer></script>
   </head>
-  <body>
+
+  <body id="body">
     <header>
       <nav>
         <div class="left-elements">
           <img src="./icons/kenzie2.png" />
-          <p>Kenzie Tech</p>
+          <span>Kenzie Tech</span>
         </div>
         <div class="right-elements">
           <ul>
@@ -21,9 +22,10 @@
             <li>SUPORTE</li>
             <li>CONTATO</li>
           </ul>
-          <button><img src="./icons/profileicon.png" /></button>
-          <button>
-            <img src="./icons/cart.png" />
+          <button class="login-btn">
+            <img src="./icons/profileicon.png" /></button>
+          <button class="cart-btn">
+            <img  src="./icons/cart.png" />
           </button>
         </div>
       </nav>
@@ -32,218 +34,62 @@
       </section>
     </header>
 
-    <div class="elements">
-    <section id="message">
-      <div class="typewriter-animation">
-        <p>Boas compras!</p>
+    <nav class="mobile-nav">
+      <div>
+        <button class="cart-close-btn"><img src="./icons/xicon.png"></button>
       </div>
-    </section>
+    </nav>
 
-    <nav class="upper-shopping">
-        <input class="search-bar" type="text" placeholder="PESQUISAR" />
-        <button class="search-button">
-          <img class="search-img" src="./icons/search.png" />
-        </button>
-      </nav>
-      
-      <div class="categories">
-        <button>TODOS</button>
-        <button><img src="./icons/pc.png" />COMPUTADORES</button>
-        <button><img src="./icons/hardwareicon.png" />HARDWARE</button>
-        <button><img src="./icons/softwareicon.png" />SOFTWARE</button>
-        <button><img src="./icons/headphone.png" />PERIFÉRICOS</button>
+    <nav class="login-nav">
+      <div>
+      <button class="login-close-btn"><img src="./icons/xicon.png"></button>
+    </div>
+      <div class="usuario">
+        <span>E-mail ou CPF</span>
+        <input type="text" required placeholder="student@kenzie.com">
+        <span>Senha</span>
+        <input required type="password" placeholder="•••••••">
+        <div>
+        <button class="login-btn">LOG-IN</button>
+        <button class="register-btn">CADASTRE-SE</button>
       </div>
-    </section>
-
-    <div class="shopping">
-      <div class="catalogue" id="catalogue">
-        <div class="product pc">
-          <div class="frame">
-          <img src="./products/pc1.png" class="product-img" />
-          </div>
-          <p>PC GAMER RHYNOS</p>
-          <span class="description">Poderosa maquina. Com este setup você pode jogar todos os jogos atuais em configurações gráficas média pra alta.</span>
-          <span class="price">R$ 4.599,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product pc">
-          <div class="frame">
-            <img src="./products/pc2.png" class="product-img" />
-            </div>
-          <p>PC GAMER IGNIS</p>
-          <span class="description">Com o Ignis você eleva sua gameplay para o próximo patamar. Este setup é capaz de executar todos os jogos atuais em configurações gráficas máximas.</span>
-          <span class="price">R$ 7.899,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product periferico">
-          <div class="frame">
-            <img src="./products/periferico1.png" class="product-img" />
-            </div>
-          <p>RAZER KRAKEN PRO 7.1</p>
-          <span class="description">O Headset Gamer Razer Kraken é uma referência para os gamers que curtem um jogo mais realista e imersivo, com detalhes sonoros que envolvem e tornam a experiência gamer ainda mais gostosa e completa. </span>
-          <span class="price">R$ 569,67</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product periferico">
-          <div class="frame">
-            <img src="./products/periferico2.png" class="product-img" />
-            </div>
-          <p>RAZER KRAKEN PRO TOURNAMENT EDITION</p>
-          <span class="description">O Headset Gamer Razer Kraken Tournament Edition foi projetado pensando no conforto extremo, qualidade sonora e versatilidade com compatibilidade para os principais consoles e acessórios atuais, para atender os usuários mais exigentes.</span>
-          <span class="price">R$ 899,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product periferico">
-          <div class="frame">
-            <img src="./products/periferico3.png" class="product-img" />
-            </div>
-          <p>RAZER DEATHADDER CHROMA V2</p>
-          <span class="description">Veja com seus próprios olhos o renascimento de um ícone com o Razer DeathAdder V2, um mouse ergonômico projetado com curvas mortais e linhas agressivas, uma arma que se manuseia como nenhuma outra. Com sensor e switches de última geração dentro de um formato mais leve, ele dá forma a uma nova era alto desempenho nos jogos.</span>
-          <span class="price">R$ 279,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product periferico">
-          <div class="frame">
-            <img src="./products/periferico4.png" class="product-img" />
-            </div>
-          <p>RAZER CYNOSA V2</p>
-          <span class="description">Pinte seu jogo com uma luz verdadeiramente envolvente com o Razer Cynosa V2 - o teclado de jogos RGB essencial. Com iluminação personalizável em cada tecla, veja-a ganhar vida enquanto joga em títulos integrados ao Chroma e adote uma experiência de jogo da qual você nunca vai querer se afastar.</span>
-          <span class="price">R$ 219,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product processor">
-          <div class="frame">
-            <img src="./products/processor1.png" class="product-img" />
-            </div>
-          <p>INTEL CORE I7 11700F 11ª GERAÇÃO</p>
-          <span class="description">Processador Intel Core i7 de décima primeira geração, contando com 8 núcleos de até 4.8Ghz.</span>
-          <span class="price">R$ 1.797,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product processor">
-          <div class="frame">
-            <img src="./products/processor2.png" class="product-img" />
-            </div>
-          <p>INTEL CORE I9 13900KF 13ª GERAÇÃO</p>
-          <span class="description">Processador Intel Core i9 de décima terceira geração, contando com 24 núcleos de até 5.7Ghz.</span>
-          <span class="price">R$ 3.999,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product processor">
-          <div class="frame">
-            <img src="./products/processor3.png" class="product-img" />
-            </div>
-            <p>INTEL CORE I7 X-SERIES</p>
-            <span class="description">Processador Intel Core i7, contando com 24 núcleos de até 5.8Ghz.</span>
-            <span class="price">R$ 2.769,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product processor">
-          <div class="frame">
-            <img src="./products/processor4.png" class="product-img" />
-            </div>
-          <p>AMD RYZEN 5 4600G</p>
-          <span class="description">O AMD Ryzen 5 4600G conta com 6 núcleos e 12 threads, impulsionando o desempenho do seu Computador com clocks de até 4,2 Ghz com Max Boost e 8MB de cache L3 total.</span>
-          <span class="price">R$ 599,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product processor">
-          <div class="frame">
-            <img src="./products/processor5.png" class="product-img" />
-            </div>
-          <p>AMD RYZEN 7 5700X</p>
-          <span class="description">Os processadores AMD Ryzen e as placas de vídeo AMD Radeon com Windows possibilitam a experiência definitiva de jogos por meio de gráficos superiores, desempenho incrível, recursos de segurança otimizados e suporte para os recursos mais recentes.</span>
-          <span class="price">R$ 1.349,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product processor">
-          <div class="frame">
-            <img src="./products/processor6.png" class="product-img" />
-            </div>
-          <p>AMD RYZEN 7 5800X</p>
-          <span class="description">O AMD Ryzen 7 5800X3D é o primeiro processador de desktop com cache L3, oferecendo 96 MB incomparáveis de cache L3 emparelhado com núcleos incrivelmente rápidos para criar o processador para jogos mais rápido do mundo.</span>
-          <span class="price">R$ 2.149,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product ram">
-          <div class="frame">
-            <img src="./products/ram1.png" class="product-img" />
-            </div>
-          <p>MEMORIA RAM RGB 8GB TRIDENTZ</p>
-          <span class="description">A memória TRIDENTZ DDR4 proporciona um poderoso aumento de performance para jogos, edição de vídeo e renderização. </span>
-          <span class="price">R$ 219,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product ram">
-          <div class="frame">
-            <img src="./products/ram2.png" class="product-img" />
-            </div>
-          <p>MEMORIA RAM 16GB (8X2) KINGSTON</p>
-          <span class="description">A memória Kingston FURY Beast DDR4 proporciona um poderoso aumento de performance para jogos, edição de vídeo e renderização. </span>
-          <span class="price">R$ 219,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product software">
-          <div class="frame">
-            <img src="./products/software1.png" class="product-img" />
-            </div>
-          <p>MICROSOFT OFFICE 365</p>
-          <span class="description">Office Home & Student te ajuda a criar conteúdo e trabalhar junto à sua família com ferramentas de produtividade. </span>
-          <span class="price">R$ 519,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product videocard">
-          <div class="frame">
-            <img src="./products/videocard1.png" class="product-img" />
-            </div>
-          <p>NVIDIA RTX 3050</p>
-          <span class="description">A GeForce RTX 3050 foi desenvolvida com o poderoso desempenho gráfico da arquitetura NVIDIA Ampere. Ela apresenta RT Cores de 2ª geração e Tensor Cores de 3ª geração dedicados, novos multiprocessadores de streaming e conta com uma memória de 8GB GDDR6 de alta velocidade, além de uma velocidade de 14Gbps para encarar os games mais atuais.</span>
-          <span class="price">R$ 2.499,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product videocard">
-          <div class="frame">
-            <img src="./products/videocard2.png" class="product-img" />
-            </div>
-          <p>NVDIA RTX 3060</p>
-          <span class="description">Equipado com ventoinhas gêmeas de 90 mm e design prático especial para dissipação de calor, a textura e aparência de carbono exclusivas trazem o máximo de frescor da placa.</span>
-          <span class="price">R$ 2.949,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product videocard">
-          <div class="frame">
-            <img src="./products/videocard3.png" class="product-img" />
-            </div>
-          <p>NVIDIA RTX 3070 TI</p>
-          <span class="description">Placa de Vídeo EVGA GeForce RTX 3070 Ti XC3 ULTRA GAMING 10GB é uma das mais atuais da NVIDIA.</span>
-          <span class="price">R$ 5.149,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product videocard">
-          <div class="frame">
-            <img src="./products/videocard4.png" class="product-img" />
-            </div>
-          <p>NVIDA RTX 3080</p>
-          <span class="description">Placa de Vídeo EVGA GeForce RTX 3080 Ti XC3 ULTRA GAMING 12GB GDDR6X Apresentando as placas de vídeo EVGA GeForce RTX 3080 Ti / RTX série 3070 Ti - placas criadas e projetadas para jogadores. A GeForce RTX 3080 Ti apresenta 20% mais VRAM em comparação com a GeForce RTX 3080, enquanto a GeForce RTX 3070 Ti oferece o dobro da taxa de dados de E / S em comparação com a GeForce RTX 3070.</span>
-          <span class="price">R$ 7.689,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
-        <div class="product videocard">
-          <div class="frame">
-            <img src="./products/videocard5.png" class="product-img" />
-            </div>
-          <p>NVIDIA RTX 3090</p>
-          <span class="description">Placa de Vídeo Zotac NVIDIA GeForce RTX 3090 Trinity The Ultimate Play A placa de vídeo GeForce RTX™ 3090 conta com a tecnologia Ampere — a 2ª geração da arquitetura RTX da NVIDIA. Desenvolvida com RT Cores e Tensor Cores avançados, novos multiprocessadores de streaming e uma memória G6 de alta velocidade, ela oferece a potência necessária para você detonar nos games mais exigentes. </span>
-          <span class="price">R$ 15.999,99</span>
-          <button>ADICIONAR AO CARRINHO</button>
-        </div>
       </div>
     </div>
+    </nav>
+
+    <div class="elements">
+
+      <section id="message">
+        <div class="typewriter-animation">
+          <span>Boas compras!</span>
+        </div>
+      </section>
+        <nav class="upper-shopping">
+          <input class="search-bar" id="search-bar" type="search" placeholder="PESQUISAR" onkeyup="myFunction()"/>
+          <button class="search-button">
+            <img class="search-img" src="./icons/search.png" />
+          </button>
+        </nav>
+        
+        <div class="categories">
+          <button onclick="clearStyle()" class="all-btn">TODOS</button>
+          <button onclick="clearStyle()" class="pc-btn"><img src="./icons/pc.png" />COMPUTADORES</button>
+          <button onclick="clearStyle()" class="hardware-btn"><img src="./icons/hardwareicon.png" />HARDWARE</button>
+          <button onclick="clearStyle()" class="software-btn"><img src="./icons/softwareicon.png" />SOFTWARE</button>
+          <button onclick="clearStyle()" class="periferico-btn"><img src="./icons/headphone.png" />PERIFÉRICOS</button>
+        </div>
+      <div class="shopping">
+        <ul class="catalogue">
+        </ul>
+      </div>
+
+    </div>
+
     <footer>
-      <p>Created by Guchierrez</p>
-      <a href="https://github.com/guchierrez/kenzie-shop"><img src="./icons/github.png"></a>
-      <a href="https://www.linkedin.com/in/guchierrez/"><img src="./icons/linkedin.png"></a>
-    </footer>
-  </div>
+    <p>Created by Guchierrez</p>
+    <a href="https://github.com/guchierrez/kenzie-shop"><img src="./icons/github.png"></a>
+    <a href="https://www.linkedin.com/in/guchierrez/"><img src="./icons/linkedin.png"></a>
+   </footer>
+
   </body>
 </html>
